@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .h1 {
+    background-color: red;
+    height: 50px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.h1:hover {
+    color: black;
+    border: 3px solid black;
+    background-color: cornflowerblue;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligns hamburger to the right */
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hamburger {
+    font-size: 30px;
+    color: white;
+    display: none; /* Hidden on larger screens */
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links > a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    right: 50px;
+    bottom: 70px;
+}
+.nav-links>a:hover{
+    color:black;
+    background-color: white;
+    padding: 14.5px 10px 22.3px 10px;
+}
+.navbar {
+    height: 50px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav-links a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 300px;
+    bottom: 80px;
+}
+.nav-links > a:hover {
+    color: black;
+    background-color: white;
+    padding: 14.5px 10px 22.3px 10px;
+}
+
+/* Hamburger menu styling for small screens */
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: red;
+        width: 100%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        visibility: hidden;
+    }
+
+    #menu-toggle:checked + .hamburger + .nav-links {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .nav-links > a {
+        padding: 15px 20px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Rest of your styles (unchanged) */
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.parent > div {
+    background-color: red;
+    padding: 10px 8px 0px 8px;
+    color: white;
+}
+
+.parent > div:hover {
+    border: 3px solid black;
+    background-color: cornflowerblue;
+}
+
+.parent > div > img:hover {
+    border-radius: 50%;
+    transform: scale(1.3, 1.3);
+}
+
+p:hover {
+    transform: scale(1.2, 1.2);
+    background-color: aliceblue;
+    width: 70px;
+    height: 40px;
+    color: blue;
+}
+
+.b:hover {
+    background-color: green;
+    transform: scale(1.3, 1.3);
+    color: black;
+}
+
+.parent2 {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.parent2 > div {
+    border: 2px solid black;
+    background-color: hotpink;
+}
+
+.parent2 > div:hover {
+    border: 2px solid green;
+    transform: scale(1.3, 1.3);
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: skyblue;
+    color: green;
+    text-align: center;
+    padding: 8px 0px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="h1">Zomato</h1>
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            
+            <div class="nav-links">
+                <a href="#Home">Home</a>
+                <a href="#Items">Items</a>
+                <a href="#Place">Place</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="parent" id="Items">
+        <div class="div"><img src="https://clubmahindra.gumlet.io/blog/images/Samosa-resized.jpg?w=376&dpr=2.6" width="300px"><center><p class="p">Samosa <br>₹:150<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg" width="300px" height="200px"><center><p class="p">Biryani <br>₹:500</br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://www.bitesbee.com/wp-content/uploads/2021/09/Chole-Bhature.jpg"width="300px" ><center><p class="p">Poori <br>₹:50<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180821150600/Indian-Breakfast-1024x682.jpg"width="300px" height="180px"><center><p class="p">Dosa <br>₹:50<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://i.pinimg.com/736x/2e/de/ef/2edeef2d617b6889e522709dc2b37761.jpg" width="300px"><center><p class="p">Idli <br>₹:70<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://www.milkmaid.in/sites/default/files/2022-12/Chocolate-Ice-Cream-335x300.jpg" width="300px" height="200px"><center><p class="p">Chocolate Ice-Cream <br>₹:150<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://icecreamfromscratch.com/wp-content/uploads/2022/05/Ice-Cream-Sundae-1.2-720x720.jpg" width="300px" height="200px"><center><p class="p">Butterscoth <br>₹:250<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://img.freepik.com/free-photo/grilled-sandwich-with-bacon-fried-egg-tomato-lettuce-served-wooden-cutting-board_1150-42571.jpg" width="300px"><center><p class="p"> Grilled Chese<br>₹:300<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://www.allrecipes.com/thmb/A1y6AQXf-MxES6OAjXzbAKfy2oY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2206436-d0018545bcb545b6b98c1a23659777cf.jpg" width="300px" height="200px"><center><p class="p">Chese <br>₹:280<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://veenaazmanov.com/wp-content/uploads/2016/09/Easy-Shawarma-Chicken-Recipe22.png" width="300px" height="200px"><center><p class="p">Chicken Shawarma<br>₹:280<br><input class="b" type="button" value="Order"></p></center></div>
+        <div class="div"><img src="https://www.healthyseasonalrecipes.com/wp-content/uploads/2019/12/greek-pizza-21-001.jpg" width="300px" height="200px"><center><p class="p">Pizza<br>₹:380<br><input class="b" type="button" value="Order"></p></center></div>
+    </div>
+    <div class="parent2" id="Place">
+    <div>1. KPHB</div>
+    <div>2. Kukatpally</div>
+    <div>3. Dilshuknagar</div>
+    <div>4. Hi-tech city</div>
+    <div>5. Banjara hills</div>
+    <div>6. Jubilee hills</div>
+    <div>7. Ameerpet</div>
+    <div>8. SR Nagar</div>
+    </div>
+    <footer id="Contact">
+        <p>@Swetha<br>Contact:12345678<br>www.swethafoods.com</p>
+    </footer>
+    <!-- Content -->
+    <!-- (Rest of your content remains unchanged) -->
+
+</body>
+</html>
